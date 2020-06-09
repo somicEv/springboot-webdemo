@@ -25,9 +25,10 @@ public class MyMvcConfig implements WebMvcConfigurer {
 
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
+		// 静态资源不用进行配置，SpringBoot已经配置了静态资源映射
 		registry.addInterceptor(new LoginHandlerInterceptor())
 				.addPathPatterns("/**")
-				.excludePathPatterns("/index","/","/user/login","/static/**");
+				.excludePathPatterns("/index", "/user/login", "/", "/static/**");
 	}
 
 	@Bean
