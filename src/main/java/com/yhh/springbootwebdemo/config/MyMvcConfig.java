@@ -2,6 +2,8 @@ package com.yhh.springbootwebdemo.config;
 
 import com.yhh.springbootwebdemo.compent.LoginHandlerInterceptor;
 import com.yhh.springbootwebdemo.compent.MyLocalResolver;
+import org.springframework.boot.web.server.ConfigurableWebServerFactory;
+import org.springframework.boot.web.server.WebServerFactoryCustomizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.LocaleResolver;
@@ -15,6 +17,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  */
 @Configuration
 public class MyMvcConfig implements WebMvcConfigurer {
+
+
+
+
 
 	@Override
 	public void addViewControllers(ViewControllerRegistry registry) {
