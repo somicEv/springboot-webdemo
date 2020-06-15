@@ -19,7 +19,6 @@ public class MyErrorAttributes extends DefaultErrorAttributes {
 		Map<String, Object> errorAttributes = super.getErrorAttributes(webRequest, options);
 		Map<String, Object> ext = (Map<String, Object>)webRequest.getAttribute("ext", 0);
 		errorAttributes.put("ext", ext);
-		System.out.println(errorAttributes);
 		return errorAttributes;
 	}
 }
